@@ -35,3 +35,6 @@ pnpm-debug.log*
 
 # OS generated files
 Thumbs.db
+
+/public/*
+.deploy_git/
