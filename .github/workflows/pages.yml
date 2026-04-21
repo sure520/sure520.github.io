@@ -3,13 +3,13 @@ name: Pages
 on:
   push:
     branches:
-      - main # 你的源码主分支，这里是main就没问题
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5 # 升级到 v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v4 # 保持v4，或升级到v5
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache

@@ -9,6 +9,7 @@
 # Production
 /build
 /dist
+/db.json
 
 # Misc
 .DS_Store
